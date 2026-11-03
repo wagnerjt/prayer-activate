@@ -39,7 +39,7 @@ public class PrayerActivatePlugin extends Plugin
 	public void onSoundEffectPlayed(SoundEffectPlayed event)
 	{
 		// Check if the sound effect played is the one for activating the Zeal prayer
-		if (event.getSoundId() == 12645 /*SoundEffectID.PRAYER_ACTIVATE_ZEAL*/)
+		if (event.getSoundId() == SoundEffectID.PRAYER_ACTIVATE_ZEAL)
 		{
 			event.consume();
 			clientThread.invokeLater(() -> client.playSoundEffect(SoundEffectID.PRAYER_ACTIVATE_PIETY));
